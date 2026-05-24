@@ -1,0 +1,112 @@
+:root {
+  --bg-dark: #080808;
+  --bg-elevated: #111111;
+  --bg-card: #1b1b1b;
+  --bg-soft: #1f1f1f;
+  --primary: #f0f0f0;
+  --primary-glow: rgba(255, 255, 255, 0.32);
+  --secondary: #9a9a9a;
+  --text-main: #fafafa;
+  --text-muted: #c3c3c3;
+  --border-color: rgba(255, 255, 255, 0.2);
+  --glass-bg: rgba(20, 20, 20, 0.88);
+  --glass-border: rgba(255, 255, 255, 0.16);
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --shadow-deep: 0 20px 60px rgba(0, 0, 0, 0.55);
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --transition-speed: 0.3s;
+  --app-bg: linear-gradient(150deg, #090909, #111111 55%, #1a1a1a);
+
+  /* Gradient backgrounds for Auth Pages */
+  --bg-gradient-start: #060606;
+  --bg-gradient-mid: #101010;
+  --bg-gradient-end: #1a1a1a;
+}
+
+[data-theme='light'] {
+  --bg-dark: #f9f9fb;
+  --bg-elevated: #ffffff;
+  --bg-card: #ffffff;
+  --bg-soft: #f2f2f2;
+  --primary: #171717;
+  --primary-glow: rgba(0, 0, 0, 0.05);
+  --secondary: #666666;
+  --text-main: #171717;
+  --text-muted: #666666;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --glass-bg: #ffffff;
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-deep: 0 12px 30px rgba(0, 0, 0, 0.1);
+  --app-bg: #ffffff;
+
+  /* Gradient backgrounds for Auth Pages */
+  --bg-gradient-start: #ffffff;
+  --bg-gradient-mid: #f9fafb;
+  --bg-gradient-end: #f3f4f6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* STRICTLY prevent global scroll */
+  background: var(--app-bg);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  content: none;
+  position: fixed;
+  inset: 0;
+  display: none;
+}
+
+body::after {
+  content: none;
+  position: fixed;
+  inset: 0;
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}

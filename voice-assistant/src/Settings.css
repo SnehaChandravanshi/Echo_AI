@@ -1,0 +1,220 @@
+.settings-container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(150deg, #090909, #111111 55%, #1a1a1a);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.settings-header {
+    display: flex;
+    align-items: center;
+    padding: 24px 40px;
+    border-bottom: 1px solid var(--glass-border);
+    background-color: rgba(16, 16, 16, 0.9);
+    backdrop-filter: blur(14px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+    border: 1px solid var(--glass-border);
+    cursor: pointer;
+    margin-right: 20px;
+    transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+[data-theme='light'] .back-btn {
+    background: rgba(17, 24, 39, 0.05);
+    border-color: rgba(17, 24, 39, 0.12);
+    color: #111827;
+}
+
+[data-theme='light'] .back-btn:hover {
+    background: rgba(17, 24, 39, 0.1);
+    color: #111827;
+}
+
+.settings-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.settings-content {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.settings-section {
+    background-color: rgba(18, 18, 18, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(14px);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: var(--shadow-soft);
+}
+
+.settings-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 24px 0;
+    font-size: 1.4rem;
+    color: #f1f1f1;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 16px;
+}
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.helper-text {
+    margin: 0 0 12px 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(10, 10, 10, 0.8);
+    color: var(--text-main);
+    font-size: 1.05rem;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.42);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.34);
+}
+
+.save-btn {
+    align-self: flex-start;
+    background: linear-gradient(145deg, #f0f0f0, #bebebe);
+    color: #0b0b0b;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.save-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(255, 255, 255, 0.12);
+}
+
+.theme-toggle-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme-info h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.1rem;
+}
+
+.theme-toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s;
+    border: 1px solid var(--border-color);
+}
+
+.theme-toggle-btn.dark {
+    background-color: #1e1e1e;
+    color: #fff;
+    border-color: #444;
+}
+
+.theme-toggle-btn.dark:hover {
+    background-color: #2a2a2a;
+}
+
+.theme-toggle-btn.light {
+    background-color: #f5f5f5;
+    color: #333;
+    border-color: #ddd;
+}
+
+.theme-toggle-btn.light:hover {
+    background-color: #e5e5e5;
+}
+
+[data-theme='light'] .settings-container {
+    background: linear-gradient(160deg, #f8fafc, #eef2f7 55%, #e5eaf1);
+}
+
+[data-theme='light'] .settings-header {
+    background-color: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid rgba(17, 24, 39, 0.12);
+}
+
+[data-theme='light'] .settings-section {
+    background-color: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(17, 24, 39, 0.14);
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1);
+}
+
+[data-theme='light'] .settings-section h2 {
+    color: #111827;
+    border-bottom-color: rgba(17, 24, 39, 0.14);
+}
+
+[data-theme='light'] .form-group input {
+    background-color: #ffffff;
+    border-color: rgba(17, 24, 39, 0.2);
+    color: #111827;
+}
+
+[data-theme='light'] .form-group input:focus {
+    border-color: rgba(17, 24, 39, 0.42);
+    box-shadow: 0 0 0 1px rgba(17, 24, 39, 0.28);
+}
+
+[data-theme='light'] .save-btn {
+    background: #111827;
+    color: #ffffff;
+}

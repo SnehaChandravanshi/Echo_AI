@@ -1,0 +1,290 @@
+.message-bubble-container {
+  display: flex;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 1000px;
+  /* Constrain content width */
+  margin-left: auto;
+  /* Center the container */
+  margin-right: auto;
+  padding: 0 20px;
+  /* Add some padding on small screens */
+}
+
+.user-bubble-container {
+  justify-content: flex-end;
+}
+
+.ai-bubble-container {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.ai-avatar {
+  margin-right: 12px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.ai-avatar-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.message-bubble {
+  max-width: 80%;
+  padding: 13px 18px;
+  border-radius: 14px;
+  font-size: 1rem;
+  line-height: 1.6;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.user-bubble {
+  background: linear-gradient(165deg, rgba(42, 42, 42, 0.72), rgba(24, 24, 24, 0.92));
+  color: var(--text-main);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.32);
+}
+
+.ai-bubble {
+  background: rgba(17, 17, 17, 0.78);
+  backdrop-filter: blur(14px);
+  color: #e6e6e6;
+  padding: 20px 24px;
+  width: fit-content;
+  max-width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.ai-bubble img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+}
+
+/* Markdown Styles within AI Bubble */
+.ai-bubble p {
+  margin-bottom: 1em;
+  line-height: 1.7;
+}
+
+.ai-bubble p:last-child {
+  margin-bottom: 0;
+}
+
+.ai-bubble strong {
+  color: #f5f5f5;
+  font-weight: 700;
+}
+
+.ai-bubble ul,
+.ai-bubble ol {
+  margin-left: 20px;
+  margin-bottom: 1em;
+}
+
+.ai-bubble li {
+  margin-bottom: 0.5em;
+}
+
+.ai-bubble pre {
+  background-color: #0d0d0d;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1em;
+  border: 1px solid #333;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.ai-bubble code {
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: #f0f0f0;
+}
+
+.ai-bubble pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  color: #d2d2d2;
+}
+
+/* Headers in Markdown */
+.ai-bubble h1,
+.ai-bubble h2,
+.ai-bubble h3 {
+  color: #ffffff;
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+}
+
+.ai-bubble table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+  border: 1px solid var(--border-color);
+}
+
+.ai-bubble th,
+.ai-bubble td {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+/* Code Block Container */
+.code-block-wrapper {
+  margin-bottom: 1em;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #333;
+  background-color: #0d0d0d;
+}
+
+.code-block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid #333;
+}
+
+.code-lang {
+  color: #888;
+  font-size: 0.8rem;
+  text-transform: lowercase;
+  font-family: monospace;
+}
+
+.copy-btn {
+  background: transparent;
+  border: none;
+  color: #aaa;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.copy-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Remove default pre styling since wrapper handles it */
+.ai-bubble pre {
+  background-color: transparent;
+  padding: 16px;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  overflow-x: auto;
+  box-shadow: none;
+}
+
+.tts-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  transition: all 0.2s ease;
+  align-self: flex-end;
+  margin-bottom: 4px;
+}
+
+.tts-btn:hover {
+  color: var(--text-main);
+  background: var(--glass-border);
+}
+
+/* Light Mode Overrides */
+[data-theme='light'] .ai-bubble {
+    background: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+    border: none;
+    color: #171717;
+    padding: 10px 0;
+}
+
+[data-theme='light'] .user-bubble {
+    background: #f4f4f4;
+    color: #171717;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='light'] .ai-avatar-image {
+    background-color: #f9f9f9;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #171717;
+}
+
+[data-theme='light'] .ai-bubble strong {
+    color: #000000;
+}
+
+[data-theme='light'] .ai-bubble h1,
+[data-theme='light'] .ai-bubble h2,
+[data-theme='light'] .ai-bubble h3 {
+    color: #000000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='light'] .ai-bubble code {
+    background-color: #f2f2f2;
+    color: #171717;
+}
+
+[data-theme='light'] .code-block-wrapper {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='light'] .code-block-header {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='light'] .copy-btn {
+    color: #666;
+}
+
+[data-theme='light'] .copy-btn:hover {
+    background-color: #eee;
+    color: #000;
+}
