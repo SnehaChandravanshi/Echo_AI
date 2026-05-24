@@ -60,8 +60,6 @@ voice-assistant/
 ├── voice-assistant/            # React frontend client
 │   ├── public/                 # Static public assets
 │   │   ├── index.html          # Main HTML entrypoint
-│   │   ├── kushal.png          # Portrait asset for Kushal Zanzari
-│   │   └── sneha.png           # Portrait asset for Sneha Chandravanshi
 │   │
 │   ├── src/                    # Frontend source files
 │   │   ├── index.js            # App wrapper and bootloader
@@ -155,17 +153,4 @@ npm start
 
 ---
 
-## 👥 Meet the Developers
 
-Echo AI is proudly conceptualized, built, and polished by:
-
-*   **Kushal Zanzari**  
-    🔗 [LinkedIn Profile](https://www.linkedin.com/in/kushal-z-a96535255)
-
-*   **Sneha Chandravanshi**  
-    🔗 [LinkedIn Profile](https://www.linkedin.com/in/sneha-chandravanshi-374082252)
-
----
-
-## 📄 License
-This project is open-source and available under the [MIT License](LICENSE). Feel free to use, modify, and build upon this platform.
